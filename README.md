@@ -6,17 +6,18 @@
 
 After container is running we can do requests to the api
 # Example:
-curl -vvv "127.0.0.1/receipts/process" -H 'Content-Type: application/json' -d '{
-    "retailer": "Walgreens",
-    "purchaseDate": "2022-01-02",
-    "purchaseTime": "08:13",
-    "total": "2.65",
-    "items": [
-        {"shortDescription": "Pepsi - 12-oz", "price": "1.25"},
-        {"shortDescription": "Dasani", "price": "1.40"}
-    ]
-}'
-curl -XGET "localhost/receipts/528482fa-57a6-4a9d-8135-2dc7162239cf/points"
+  curl -vvv "127.0.0.1/receipts/process" -H 'Content-Type: application/json' -d '{
+      "retailer": "Walgreens",
+      "purchaseDate": "2022-01-02",
+      "purchaseTime": "08:13",
+      "total": "2.65",
+      "items": [
+          {"shortDescription": "Pepsi - 12-oz", "price": "1.25"},
+          {"shortDescription": "Dasani", "price": "1.40"}
+      ]
+  }'
+
+  curl -XGET "localhost/receipts/528482fa-57a6-4a9d-8135-2dc7162239cf/points"
 
 # Receipt Processor
 
